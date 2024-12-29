@@ -34,4 +34,10 @@ jobs:
       run: |
         #!/usr/bin/env bash
         skopeo copy docker://gcr.io/kaniko-project/executor:v1.13.0 docker://yueou/kaniko-executor:v1.13.0
- 
+        skopeo copy --all docker://registry.k8s.io/kube-apiserver:v1.27.4 docker://docker.io/yueou/kube-apiserver:v1.27.4
+        skopeo copy --all docker://registry.k8s.io/kube-controller-manager:v1.27.4 docker://docker.io/yueou/kube-controller-manager:v1.27.4
+        skopeo copy --all docker://registry.k8s.io/kube-scheduler:v1.27.4 docker://docker.io/yueou/kube-scheduler:v1.27.4
+        skopeo copy --all docker://registry.k8s.io/kube-proxy:v1.27.4 docker://docker.io/yueou/kube-proxy:v1.27.4
+        skopeo copy --all docker://registry.k8s.io/pause:3.9 docker://docker.io/yueou/pause:3.9
+        skopeo copy --all docker://registry.k8s.io/etcd:3.5.7-0 docker://docker.io/yueou/etcd:3.5.7-0
+        skopeo copy --all docker://registry.k8s.io/coredns/coredns:v1.10.1 docker://docker.io/yueou/coredns:v1.10.1
